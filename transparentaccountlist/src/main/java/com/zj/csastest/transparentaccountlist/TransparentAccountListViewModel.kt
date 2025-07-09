@@ -176,7 +176,7 @@ class TransparentAccountListViewModel(
                 val _query = if (it.query.length > 100) it.query.substring(0, 100) else it.query
                 it.copy(query = _query.trim(), page = it.page + 1, force = false)
             }
-        } else if (requestEvent is TransparentAccountsListEvent.DefaultSuccess){ // handle has more db pages?
+        } else if (requestEvent is TransparentAccountsListEvent.DefaultSuccess){
             LOG.d("calling loadNextPage followed from database state.page: " + state.page)
             requester.set {
                 val _query = if (it.query.length > 100) it.query.substring(0, 100) else it.query
