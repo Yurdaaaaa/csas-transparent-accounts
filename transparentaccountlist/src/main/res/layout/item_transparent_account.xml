@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:minHeight="@dimen/item_transparent_account_min_height"
+    android:paddingStart="@dimen/transparent_account_item_padding_start"
+    android:paddingEnd="@dimen/transparent_account_item_padding_end"
+    android:paddingBottom="@dimen/transparent_account_item_padding_bottom"
+    android:paddingTop="@dimen/transparent_account_item_padding_top"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/item_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/round_background_transparent_account"
+        android:foreground="@drawable/item_round_selector"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/bank_icon_padding"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/bankIcon"
+                android:layout_width="@dimen/bank_icon_size"
+                android:layout_height="@dimen/bank_icon_size"
+                android:layout_gravity="center"
+                app:tint="@color/blue_george"
+                android:src="@drawable/ic_account" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/dateContainer"
+                    android:layout_alignParentStart="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/accountName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-medium"
+                        android:maxLines="1"
+                        android:paddingEnd="@dimen/account_name_end_padding"
+                        android:textSize="@dimen/account_name_text_size"
+                        android:textColor="@color/black"
+                        tools:text="Ceska sporitelna a.s" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/balance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif"
+                            android:maxLines="1"
+                            android:paddingEnd="@dimen/account_balance_end_padding"
+                            android:textSize="@dimen/account_balance_text_size"
+                            android:textColor="@color/black"
+                            tools:text="200" />
+
+                        <TextView
+                            android:id="@+id/currency"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif"
+                            android:maxLines="1"
+                            android:textSize="@dimen/account_currency_text_size"
+                            android:textColor="@color/black"
+                            tools:text="CZK" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dateContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/arrow"
+                        android:layout_width="@dimen/arrow_detail_size"
+                        android:layout_height="@dimen/arrow_detail_size"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_arrow_next"
+                        app:tint="@color/blue_george">
+                    </ImageView>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

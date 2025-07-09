@@ -1,0 +1,65 @@
+<resources>
+
+    <style name="Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="android:elevation">3dp</item>
+        <item name="titleTextAppearance">@style/ToolbarTitleText</item>
+        <item name="titleTextColor">@color/black</item>
+<!--        <item name="subtitleTextColor">?attr/defaultSubTextColor</item>-->
+<!--        <item name="android:theme">@style/ToolbarThemeOverlay</item>-->
+    </style>
+
+    <style name="ToolbarTitleText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="ToolbarTitleText.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ToolbarTitleText.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="DefaultButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="rippleColor">?attr/colorControlHighlight</item>
+        <item name="iconPadding">8dp</item>
+        <item name="iconTint">@color/white</item>
+        <item name="cornerRadius">32dp</item>
+    </style>
+
+    <style name="DefaultImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="rippleColor">?attr/colorControlHighlight</item>
+        <item name="elevation">2dp</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <style name="DefaultPopupMenu" parent="Widget.MaterialComponents.PopupMenu">
+        <item name="overlapAnchor">true</item>
+        <item name="android:dropDownHorizontalOffset">4dp</item>
+        <item name="android:dropDownVerticalOffset">4dp</item>
+    </style>
+</resources>

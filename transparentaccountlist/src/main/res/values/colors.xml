@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Colors -->
+    <color name="blue_george">#2870ed</color>
+    <color name="blue_dark">#126DB6</color>
+
+    <color name="black">#000</color>
+
+    <color name="balance_positive">#306C32</color>
+    <color name="balance_neutral">#7E7E7E</color>
+    <color name="balance_negative">#F44336</color>
+</resources>

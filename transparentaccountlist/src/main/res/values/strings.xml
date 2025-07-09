@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nothing_found">Nothing found</string>
+    <string name="menu">menu</string>
+    <string name="transparent_accounts_title">Transparent accounts</string>
+    <string name="delete_accounts">delete all accounts</string>
+    <string name="try_pull_to_refresh">Try pulling down to refresh and load the latest data</string>
+
+    <string name="currency_czk">Kč</string>
+    <string name="currency_usd">$</string>
+    <string name="currency_eur">€</string>
+</resources>

@@ -1,0 +1,58 @@
+
+CREATE TABLE transparentAccount (
+    accountNumber TEXT NOT NULL PRIMARY KEY,
+    bankCode TEXT NOT NULL,
+    transparencyFrom TEXT NOT NULL,
+    transparencyTo TEXT NOT NULL,
+    publicationTo TEXT NOT NULL,
+    actualizationDate TEXT NOT NULL,
+    balance REAL NOT NULL,
+    currency TEXT NOT NULL,
+    name TEXT NOT NULL,
+    iban TEXT NOT NULL
+);
+
+selectAll:
+SELECT * FROM transparentAccount;
+
+insertAccount:
+INSERT INTO transparentAccount (
+    accountNumber,
+    bankCode,
+    transparencyFrom,
+    transparencyTo,
+    publicationTo,
+    actualizationDate,
+    balance,
+    currency,
+    name,
+    iban
+) VALUES (
+    ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+);
+
+update:
+UPDATE transparentAccount SET
+    bankCode = ?,
+    transparencyFrom = ?,
+    transparencyTo = ?,
+    publicationTo = ?,
+    actualizationDate = ?,
+    balance = ?,
+    currency = ?,
+    name = ?,
+    iban = ?
+WHERE accountNumber = ?;
+
+selectAllSortedByDate:
+SELECT * FROM transparentAccount
+ORDER BY actualizationDate DESC;
+
+deleteAll:
+DELETE FROM transparentAccount;
+
+transparentAccountsChanged:
+SELECT 1 FROM transparentAccount LIMIT 1;
+
+changes:
+SELECT changes();

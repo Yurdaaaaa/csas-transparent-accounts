@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Csastest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="android:statusBarColor">#FFFFFF</item>
+    </style>
+
+    <style name="Theme.Csastest" parent="Base.Theme.Csastest" />
+</resources>
