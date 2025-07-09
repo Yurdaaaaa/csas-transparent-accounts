@@ -14,17 +14,6 @@ buildscript {
 }
 
 plugins {
-//    id("com.github.ben-manes.versions") version libs.versions.gradle.versions.plugin.ben.manes apply false
-//    id("com.android.application") version libs.versions.agp apply false
-//    id("com.android.library") version libs.versions.comAndroidLibrary apply false
-//    id("org.jetbrains.kotlin.android") version libs.versions.kotlin apply false
-//    id("org.jetbrains.kotlin.kapt") version libs.versions.kotlin apply false
-//    id("com.google.firebase.crashlytics") version libs.versions.crashlyticsGradle apply false
-//    id("org.jetbrains.kotlin.plugin.parcelize") version libs.versions.kotlin apply false
-//    id("app.cash.sqldelight") version libs.versions.sqlDelight apply false
-
-//    alias(libs.plugins.gradle.versions) apply false
-//    id("com.github.ben-manes.versions") version libs.versions.gradle.versions.plugin.ben.manes apply false
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.comAndroidLibrary) apply false
     alias(libs.plugins.jetbrains.kotlin.android) apply false

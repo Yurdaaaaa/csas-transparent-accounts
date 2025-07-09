@@ -43,15 +43,7 @@ object NetModule {
 
         return "$packageName/v$versionName(vc$versionCode)/Android"
     }
-//
-//    @AppScope
-//    @Provides
-//    @JvmStatic
-//    fun connectivityHelper(context: Context): ConnectivityHelper {
-//        val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-//        return ConnectivityHelper(connectivityManager)
-//    }
-//
+
     @AppScope
     @Provides
     @JvmStatic

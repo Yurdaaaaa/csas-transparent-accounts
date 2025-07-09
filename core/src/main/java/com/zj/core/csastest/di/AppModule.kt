@@ -5,8 +5,7 @@ import dagger.Module
 @Module(
     includes = [
         NetModule::class,
-        DataModule::class,
-//        MiscModule::class,
+        DataModule::class
     ]
 )
 class AppModule
