@@ -8,7 +8,7 @@ Android aplikace postavená na architektuře **MVI**, s využitím **single-acti
 - **MVI Architecture** – unidirectional data flow pro predikovatelné chování
 - **[Conductor](https://github.com/bluelinelabs/Conductor)** – lightweight framework pro správu navigace a lifecycle
 - **[RxKotlin](https://github.com/ReactiveX/RxKotlin)** – reaktivní programování postavené na RxJava
-- **[RxRelay](https://github.com/JakeWharton/RxRelay)** – bezchybná alternativa k Subjectům pro řízení stavů a událostí
+- **[RxRelay](https://github.com/JakeWharton/RxRelay)** – řízení stavů a událostí
 - **[Retrofit](https://square.github.io/retrofit/)** – HTTP klient pro REST API
 - **[Moshi](https://github.com/square/moshi)** – JSON (de)serializace
 - **[SQLDelight](https://cashapp.github.io/sqldelight/)** – typově bezpečná práce s databází přes SQL
