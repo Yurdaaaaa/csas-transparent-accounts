@@ -75,7 +75,7 @@ object NetModule {
 
             addInterceptor(UserAgentInterceptor(userAgent(context)))
             addInterceptor(IdempotencyInterceptor()) // all csas request are @GET so this is redundant
-            addInterceptor(WebApiKeyInterceptor(BuildConfig.API_KEY))
+            addInterceptor(WebApiKeyInterceptor(BuildConfig.API_KEY)) // add keys to local.properties !
         }.build()
     }
 
@@ -89,9 +89,9 @@ object NetModule {
 
         val retrofit = Retrofit.Builder().baseUrl(
             if (BuildConfig.DEBUG) {
-                BuildConfig.CSAS_SANDBOX_API
+                BuildConfig.CSAS_SANDBOX_API // add keys to local.properties !
             } else {
-                BuildConfig.CSAS_PROD_API
+                BuildConfig.CSAS_PROD_API // add keys to local.properties !
             }
         )
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
