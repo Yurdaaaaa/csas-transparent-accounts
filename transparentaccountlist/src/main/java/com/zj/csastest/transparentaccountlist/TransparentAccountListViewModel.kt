@@ -30,8 +30,6 @@ class TransparentAccountListViewModel(
     private val accountListRelay = BehaviorRelay.create<List<TransparentAccount>>()
     val accountListObservable: Observable<List<TransparentAccount>>
         get() = accountListRelay
-    val accountListState: List<TransparentAccount>?
-        get() = accountListRelay.value
 
     private val listLoaderStateRelay = BehaviorRelay.createDefault(ListLoaderState())
     val listLoaderStateObservable: Observable<ListLoaderState>
