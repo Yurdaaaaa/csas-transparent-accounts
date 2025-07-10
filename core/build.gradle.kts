@@ -71,10 +71,10 @@ dependencies {
 
     implementation (libs.conductorRuntime)
 
-//    testImplementation (libs.sqlDelightJdbcDriver)
+    testImplementation (libs.sqlDelightJdbcDriver)
 //    testImplementation deps.test.mockitoCore
 //    testImplementation deps.test.mockitoKotlin
-//    testImplementation deps.test.junit
+    testImplementation (libs.testJunit)
 //    testImplementation 'org.mockito:mockito-inline:2.13.0'
 //    testImplementation 'io.mockk:mockk:1.12.0'
 }
