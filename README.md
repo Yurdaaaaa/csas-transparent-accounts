@@ -26,15 +26,20 @@ Android aplikace postavená na architektuře **MVI**, s využitím **single-acti
 
 Aplikace je plně funkční i bez připojení k internetu. Všechna důležitá data jsou ukládána lokálně pomocí SQLDelight
 
-## 🔐 API klíče a konfigurace
+## 🔐  API klíče a Schování API klíčů
 
-Následující hodnoty jsou schované v souboru `local.properties`:
+Pokud bychom chtěli částečně schovat API a API klíč, mohli bychom je přesunout do souboru `local.properties`.
+
+Aby se ale tento sample projekt testoval jednodušeji, přidal jsem tyto klíče rovnou do souboru [`net/Constants.kt`](net/Constants.kt), kde jsou viditelně dostupné.
+
+Původně by se hodnoty mohly nacházet například takto v souboru `local.properties`:
 
 ```
 API_KEY=xxxxxx
 CSAS_SANDBOX_API=https://webapi.developers.erstegroup.com/api/csas/public/sandbox/v3/
 CSAS_PROD_API=https://www.csas.cz/webapi/api/v3/
 ```
+
 
 > ⚠️ Pokud otevření projektu v Android Studiu způsobí přegenerování souboru `local.properties`, přidejte tyto hodnoty **manuálně zpět**, jinak nebude stahovat data ze serveru.
 
