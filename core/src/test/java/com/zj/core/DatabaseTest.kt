@@ -6,6 +6,7 @@ import com.zj.core.csastest.data.model.TransparentAccountQueries
 import com.zj.core.csastest.di.DataModule
 import com.zj.csastest.core.Database
 import org.junit.After
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
@@ -54,6 +55,57 @@ class DatabaseTest {
                 iban = "CZ1208000000001234567890"
             )
         )
+    }
+
+    @Test
+    fun sortByActualizationDateTest() {
+        assertTrue(transparentAccountQueries.selectAll().executeAsList().isEmpty())
+
+        transparentAccountQueries.insertAccount(
+            accountNumber = "001",
+            bankCode = "0800",
+            transparencyFrom = "2024-01-01",
+            transparencyTo = "2025-01-01",
+            publicationTo = "2025-12-31",
+            actualizationDate = "2025-07-10T15:00:00",
+            balance = 1000.0,
+            currency = "CZK",
+            name = "Účet A",
+            iban = "CZ1208000000000000000001"
+        )
+
+        transparentAccountQueries.insertAccount(
+            accountNumber = "002",
+            bankCode = "0800",
+            transparencyFrom = "2024-01-01",
+            transparencyTo = "2025-01-01",
+            publicationTo = "2025-12-31",
+            actualizationDate = "2025-07-11T10:00:00", // newest
+            balance = 2000.0,
+            currency = "CZK",
+            name = "Účet B",
+            iban = "CZ1208000000000000000002"
+        )
+
+        transparentAccountQueries.insertAccount(
+            accountNumber = "003",
+            bankCode = "0800",
+            transparencyFrom = "2024-01-01",
+            transparencyTo = "2025-01-01",
+            publicationTo = "2025-12-31",
+            actualizationDate = "2025-07-09T09:00:00", // oldest
+            balance = 3000.0,
+            currency = "CZK",
+            name = "Účet C",
+            iban = "CZ1208000000000000000003"
+        )
+
+        val sortedAccounts = transparentAccountQueries.selectAllSortedByDate().executeAsList()
+
+        assertEquals(3, sortedAccounts.size)
+        assertEquals("002", sortedAccounts[0].accountNumber)
+        assertEquals("001", sortedAccounts[1].accountNumber)
+        assertEquals("003", sortedAccounts[2].accountNumber)
     }
 
     @After fun teardown() {
