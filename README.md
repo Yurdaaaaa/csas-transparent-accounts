@@ -35,9 +35,9 @@ Aby se ale tento sample projekt testoval jednodušeji, přidal jsem tyto klíče
 Původně by se hodnoty mohly nacházet například takto v souboru `local.properties`:
 
 ```
-API_KEY=xxxxxx
-CSAS_SANDBOX_API=https://webapi.developers.erstegroup.com/api/csas/public/sandbox/v3/
-CSAS_PROD_API=https://www.csas.cz/webapi/api/v3/
+API_KEY=xxxxxxxxxxx
+CSAS_SANDBOX_API=https://webapi.developers.erstegroup.com/api/xxxxxxxxxxx
+CSAS_PROD_API=https://www.csas.cz/xxxxxxxxxxx
 ```
 
 ## 🧹 Normalizace dat & formátování
