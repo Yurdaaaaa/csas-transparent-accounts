@@ -5,6 +5,7 @@ import android.content.pm.PackageManager
 import com.squareup.moshi.Moshi
 import com.zj.core.csastest.data.TransparentAccountRepository
 import com.zj.core.csastest.data.mapper.ApiToDbTransparentAccountMapper
+import com.zj.core.csastest.net.Constants
 import com.zj.core.csastest.net.TransparentAccountsApi
 import com.zj.core.csastest.net.TransparentAccountsApiClient
 import com.zj.core.csastest.net.TransparentAccountsNetworkManager
@@ -75,7 +76,7 @@ object NetModule {
 
             addInterceptor(UserAgentInterceptor(userAgent(context)))
             addInterceptor(IdempotencyInterceptor()) // all csas request are @GET so this is redundant
-            addInterceptor(WebApiKeyInterceptor(BuildConfig.API_KEY)) // add keys to local.properties !
+            addInterceptor(WebApiKeyInterceptor(Constants.API_KEY)) // to be less visible add keys to local.properties and load them into BuildConfig.API_KEY
         }.build()
     }
 
@@ -89,9 +90,9 @@ object NetModule {
 
         val retrofit = Retrofit.Builder().baseUrl(
             if (BuildConfig.DEBUG) {
-                BuildConfig.CSAS_SANDBOX_API // add keys to local.properties !
+                Constants.CSAS_SANDBOX_API // to be less visible add keys to local.properties and load them into BuildConfig.CSAS_SANDBOX_API
             } else {
-                BuildConfig.CSAS_PROD_API // add keys to local.properties !
+                Constants.CSAS_PROD_API // to be less visible add keys to local.properties and load them into  BuildConfig.CSAS_PROD_API
             }
         )
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
