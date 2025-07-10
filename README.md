@@ -40,9 +40,6 @@ CSAS_SANDBOX_API=https://webapi.developers.erstegroup.com/api/csas/public/sandbo
 CSAS_PROD_API=https://www.csas.cz/webapi/api/v3/
 ```
 
-
-> ⚠️ Pokud otevření projektu v Android Studiu způsobí přegenerování souboru `local.properties`, přidejte tyto hodnoty **manuálně zpět**, jinak nebude stahovat data ze serveru.
-
 ## 🧹 Normalizace dat & formátování
 
 - Některé názvy obsahovaly nechtěné mezery na začátku – byly normalizovány pomocí `.trim()`.
