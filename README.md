@@ -50,4 +50,10 @@ CSAS_PROD_API=https://www.csas.cz/webapi/api/v3/
 
 ---
 
+## Testování databáze v paměti (in-memory)
+
+Pro testování SQLDelight databáze používám in-memory přístup. V tomto projektu je ukázka dostupná v zde:
+
+[`core/src/test/java/com/zj/core/DatabaseTest`](core/src/test/java/com/zj/core/DatabaseTest.kt)
+
 > ⚠️ Paging mi nefungoval. Zkoušel jsem několik kombinací, ale nepodařilo se mi ho rozběhat. Možná jde o nechtěnou "feature" sandboxu?
