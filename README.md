@@ -56,4 +56,6 @@ Pro testování SQLDelight databáze používám in-memory přístup. V tomto pr
 
 [`core/src/test/java/com/zj/core/DatabaseTest`](core/src/test/java/com/zj/core/DatabaseTest.kt)
 
+## Paging
+
 > ⚠️ Paging mi nefungoval. Zkoušel jsem několik kombinací, ale nepodařilo se mi ho rozběhat. Možná jde o nechtěnou "feature" sandboxu?
