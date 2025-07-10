@@ -30,7 +30,7 @@ Aplikace je plně funkční i bez připojení k internetu. Všechna důležitá 
 
 Pokud bychom chtěli částečně schovat API a API klíč, mohli bychom je přesunout do souboru `local.properties`.
 
-Aby se ale tento sample projekt testoval jednodušeji, přidal jsem tyto klíče rovnou do souboru [`net/Constants.kt`](net/Constants.kt), kde jsou viditelně dostupné.
+Aby se ale tento sample projekt testoval jednodušeji, přidal jsem tyto klíče rovnou do souboru [`net/Constants.kt`](core/src/main/java/com/zj/core/csastest/net/Constants.kt), kde jsou viditelně dostupné.
 
 Původně by se hodnoty mohly nacházet například takto v souboru `local.properties`:
 
