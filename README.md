@@ -12,6 +12,8 @@ Android aplikace postavená na architektuře **MVI**, s využitím **single-acti
 - **[Retrofit](https://square.github.io/retrofit/)** – HTTP klient pro REST API
 - **[Moshi](https://github.com/square/moshi)** – JSON (de)serializace
 - **[SQLDelight](https://cashapp.github.io/sqldelight/)** – typově bezpečná práce s databází přes SQL
+- **[Dagger](https://github.com/google/dagger)** –  Dependency injection
+- **[JUnit](https://github.com/junit-team)** – Unit Testing
 
 👉 Kompletní seznam knihoven najdeš v souboru [`libs.versions.toml`](./gradle/libs.versions.toml)
 
