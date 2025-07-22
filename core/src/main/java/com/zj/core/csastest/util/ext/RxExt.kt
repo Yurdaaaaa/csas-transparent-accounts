@@ -21,7 +21,7 @@ fun <T> Observable<T>.throwingSubscribe(onNext: Consumer<T>): Disposable {
     return subscribe(onNext, Consumer { t -> throw t })
 }
 
-inline fun <T> BehaviorRelay<T>.accept(action: (T) -> T) {
+inline fun <T : Any> BehaviorRelay<T>.accept(action: (T) -> T) {
     val value = value
     if (value != null) {
         accept(action(value))

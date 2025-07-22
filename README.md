@@ -21,8 +21,8 @@ Android aplikace postavená na architektuře **MVI**, s využitím **single-acti
 
 - **Target SDK:** 36
 - **Java version:** 17
-- **Kotlin version:** 1.8.22
-  > Vybraná z důvodu rychlejších buildů oproti novějším verzím
+- **Kotlin version:** 2.1.21
+- **Ksp:** 2.1.21-2.0.2
 
 ## ✈️ Offline podpora
 
