@@ -3,6 +3,7 @@ package com.zj.core.csastest.data.mapper
 import com.zj.core.csastest.data.DbTransparentAccount
 import com.zj.core.csastest.data.model.TransparentAccountListItem
 import com.zj.core.csastest.data.model.TransparentAccountListItem.*
+import com.zj.core.csastest.data.model.toDomain
 
 const val NUMBER_OF_PROGRESS_BAR_ITEMS = 1
 
@@ -37,7 +38,7 @@ object TransparentAccountItemMapper {
 
     private fun processAccounts(accounts: List<DbTransparentAccount>, listItems: MutableList<TransparentAccountListItem>) {
         accounts.forEach { account ->
-            listItems.add(TransparentAccountItem(account))
+            listItems.add(TransparentAccountItem(account.toDomain()))
         }
     }
 }

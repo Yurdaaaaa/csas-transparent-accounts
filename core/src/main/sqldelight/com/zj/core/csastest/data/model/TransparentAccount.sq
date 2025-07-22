@@ -6,7 +6,7 @@ CREATE TABLE transparentAccount (
     transparencyTo TEXT NOT NULL,
     publicationTo TEXT NOT NULL,
     actualizationDate TEXT NOT NULL,
-    balance REAL NOT NULL,
+    balance TEXT NOT NULL,
     currency TEXT NOT NULL,
     name TEXT NOT NULL,
     iban TEXT NOT NULL

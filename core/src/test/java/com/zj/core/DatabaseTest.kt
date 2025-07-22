@@ -10,6 +10,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
+import java.math.BigDecimal
 
 class DatabaseTest {
     private lateinit var driver: JdbcSqliteDriver
@@ -32,7 +33,7 @@ class DatabaseTest {
             transparencyTo = "2025-01-01",
             publicationTo = "2025-12-31",
             actualizationDate = "2025-07-10",
-            balance = 123456.78,
+            balance = BigDecimal.valueOf(123456.78).toString(),
             currency = "CZK",
             name = "Transparentní účet",
             iban = "CZ1208000000001234567890"
@@ -49,7 +50,7 @@ class DatabaseTest {
                 transparencyTo = "2025-01-01",
                 publicationTo = "2025-12-31",
                 actualizationDate = "2025-07-10",
-                balance = 123456.78,
+                balance = BigDecimal.valueOf(123456.78).toString(),
                 currency = "CZK",
                 name = "Transparentní účet",
                 iban = "CZ1208000000001234567890"
@@ -68,7 +69,7 @@ class DatabaseTest {
             transparencyTo = "2025-01-01",
             publicationTo = "2025-12-31",
             actualizationDate = "2025-07-10T15:00:00",
-            balance = 1000.0,
+            balance = BigDecimal.valueOf(1000.0).toString(),
             currency = "CZK",
             name = "Účet A",
             iban = "CZ1208000000000000000001"
@@ -81,7 +82,7 @@ class DatabaseTest {
             transparencyTo = "2025-01-01",
             publicationTo = "2025-12-31",
             actualizationDate = "2025-07-11T10:00:00", // newest
-            balance = 2000.0,
+            balance = BigDecimal.valueOf(2000.0).toString(),
             currency = "CZK",
             name = "Účet B",
             iban = "CZ1208000000000000000002"
@@ -94,7 +95,7 @@ class DatabaseTest {
             transparencyTo = "2025-01-01",
             publicationTo = "2025-12-31",
             actualizationDate = "2025-07-09T09:00:00", // oldest
-            balance = 3000.0,
+            balance = BigDecimal.valueOf(3000.0).toString(),
             currency = "CZK",
             name = "Účet C",
             iban = "CZ1208000000000000000003"

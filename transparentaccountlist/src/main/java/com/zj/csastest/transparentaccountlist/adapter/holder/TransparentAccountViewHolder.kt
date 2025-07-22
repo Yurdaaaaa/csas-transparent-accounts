@@ -8,6 +8,7 @@ import com.zj.core.csastest.data.model.TransparentAccountListItem.TransparentAcc
 import com.zj.core.csastest.util.ext.ifPositionValid
 import com.zj.csastest.transparentaccountlist.R
 import com.zj.csastest.transparentaccountlist.adapter.TransparentAccountClickListener
+import java.math.BigDecimal
 import java.text.DecimalFormat
 
 open class TransparentAccountViewHolder(
@@ -48,12 +49,12 @@ open class TransparentAccountViewHolder(
         currencyTextView.text = currencySymbol
     }
 
-    fun setBalance(balance: Double) {
+    fun setBalance(balance: BigDecimal) {
         balanceTextView.text = czechFormatter.format(balance)
 
         val colorRes = when {
-            balance > 0 -> R.color.balance_positive
-            balance < 0 -> R.color.balance_negative
+            balance > BigDecimal.ZERO -> R.color.balance_positive
+            balance < BigDecimal.ZERO -> R.color.balance_negative
             else -> R.color.balance_neutral
         }
 
